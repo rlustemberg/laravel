@@ -14,7 +14,7 @@ trait Laravel50Compatibility {
      * @internal param string $style
      * @return void
      */
-    public function table($headers, $rows, $style = 'default') {
+    public function table(array $headers, array $rows, $style = 'default') {
         try {
             $table = $this->getHelperSet()->get('table');
         } catch (InvalidArgumentException $error) {
